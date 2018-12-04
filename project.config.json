@@ -1,5 +1,5 @@
 {
-	"description": "项目配置文件。",
+	"description": "项目配置文件",
 	"packOptions": {
 		"ignore": []
 	},
@@ -11,9 +11,12 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.4.0",
-	"appid": "wx050ff19de3fa3d45",
+	"libVersion": "2.4.1",
+	"appid": "wxcaa42fdfa97f2ce3",
 	"projectname": "zm",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
 	"isGameTourist": false,
 	"condition": {
 		"search": {

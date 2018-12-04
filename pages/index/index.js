@@ -2,6 +2,7 @@
 //获取应用实例
 var app = getApp()
 var fileData = require('../../utils/data.js')
+var mockData = require('../../mock/data-zx.js')
 
 Page({
   // 页面初始数据
@@ -18,8 +19,11 @@ Page({
       navTopItems: fileData.getIndexNavData(),
       navSectionItems: fileData.getIndexNavSectionData(),
       curNavId: 1,
-		  curIndex: 0
-  },
+        curIndex: 0,
+
+      zixunList: mockData.getZxData()
+
+    },
    
   onLoad:function(){
     var that = this

@@ -11,7 +11,7 @@
   ],
   "window":{  
     "navigationBarBackgroundColor": "#FF9224",
-    "navigationBarTitleText": "泽木教育",
+    "navigationBarTitleText": "汽配人网",
     "navigationBarTextStyle":"#fff",
     "backgroundTextStyle": "light"
    
@@ -24,24 +24,24 @@
     "list": [{
       "pagePath": "pages/index/index",
       "text": "首页",
-      "iconPath":"images/index_icon.png",
-      "selectedIconPath":"images/index_icon_HL.png"
+      "iconPath":"images/tabbar/index_icon.png",
+      "selectedIconPath":"images/tabbar/index_icon_HL.png"
     }, {
       "pagePath": "pages/technician/technician",
       "text": "机构列表",
-      "iconPath":"images/skill_icon.png",
-      "selectedIconPath":"images/skill_icon_HL.png"
+      "iconPath":"images/tabbar/skill_icon.png",
+      "selectedIconPath":"images/tabbar/skill_icon_HL.png"
     }, {
       "pagePath": "pages/jishuzx/technician",
-      "text": "技术资讯",
-      "iconPath":"images/user_icon.png",
-      "selectedIconPath":"images/user_icon_HL.png"
+      "text": "择木资讯",
+      "iconPath":"images/tabbar/user_icon.png",
+      "selectedIconPath":"images/tabbar/user_icon_HL.png"
     },
     {
       "pagePath": "pages/user/user",
       "text": "个人中心",
-      "iconPath": "images/user_ceneter.png",
-      "selectedIconPath": "images/user_ceneter_HL.png"
+      "iconPath": "images/tabbar/user_ceneter.png",
+      "selectedIconPath": "images/tabbar/user_ceneter_HL.png"
     }
     
     ]

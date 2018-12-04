@@ -3,66 +3,90 @@
 	{{title}}
 </loading>-->
 <view class="container">
-<scroll-view  scroll-y="true"  class="page-body" bindscrolltolower="loadMore">
-  <!--banner-->
-  <view class="swiper">
-      <swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}"
-              autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-          <block wx:for-items="{{banner_url}}" wx:key="item.id">
-              <swiper-item>
-                <block wx:if="{{item}}">
-                  <image src="{{item}}"  mode="aspectFill"/>
+    <scroll-view  scroll-y="true"  class="page-body" bindscrolltolower="loadMore">
+        <!--banner-->
+        <view class="swiper">
+            <swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}"
+                    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+                <block wx:for-items="{{banner_url}}" wx:key="item.id">
+                    <swiper-item>
+                        <block wx:if="{{item}}">
+                        <image src="{{item}}"  mode="aspectFill"/>
+                        </block>
+                        <block wx:else>
+                        <image src="../../images/default_pic.png" mode="aspectFill"></image>
+                        </block>
+                    </swiper-item>
                 </block>
-                <block wx:else>
-                  <image src="../../images/default_pic.png" mode="aspectFill"></image>
-                </block>
-              </swiper-item>
-          </block>
-      </swiper>
-  </view>
-  <!--nav-->
-  <view class="nav_top">
-    <block wx:for="{{navTopItems}}" wx:key="item.id">
-      <view class="nav_top_items {{curNavId == item.id ? 'active_'+colors[index] : ''}}" bindtap="switchTab" data-index="{{index}}" data-id="{{item.id}}">
-        <image src="{{item.icon}}" mode="aspectFill"></image>
-        <text>{{item.title}}</text>
-      </view>
-    </block>
-  </view>
-  <!--list-->
-  <view class="nav_section">
-    <view wx:if="{{list[curIndex]}}">
-        <block wx:for="{{list[curIndex]}}" wx:key="item.id">
-            <view class="nav_section_items" >
-                <!--image-->
-                <view class="section_image" bindtap="navigateDetail" data-aid="{{item.id}}">
-                <block wx:if="{{item.coverpath}}">
-                    <image src="{{item.coverpath}}" mode="aspectFill"></image>
-                </block>
-                <block wx:else>
-                    <image src="../../images/default_pic.png" mode="aspectFill"></image>
-                </block>
-                </view>
-                <!--content-->
-                <view class="section_cont" bindtap="navigateDetail" data-aid="{{item.id}}">
-                    <view class="section_cont_sub">
-                        <text>{{item.subject}}</text>
-                    </view>
-                    <view class="section_cont_price">价格：{{item.price}}</view>
-                    <view>{{item.message}}</view>
-                </view>
-                <!--book-->
-                <view class="section_book" bindtap="bookTap" data-aid="{{item.id}}">
-                        <text>预约</text>
-                </view>
+            </swiper>
+        </view>
+        <!--nav-->
+        <view class="nav_top">
+            <block wx:for="{{navTopItems}}" wx:key="item.id">
+            <view class="nav_top_items {{curNavId == item.id ? 'active_'+colors[index] : ''}}" bindtap="switchTab" data-index="{{index}}" data-id="{{item.id}}">
+                <image src="{{item.icon}}" mode="aspectFill"></image>
+                <text>{{item.title}}</text>
             </view>
-            
-        </block>
-    </view>
-    
-    <view wx:else>暂无数据</view>
+            </block>
+        </view>
+        <!--list-->
+        <view class="nav_section">
+            <view wx:if="{{list[curIndex]}}">
+                <block wx:for="{{list[curIndex]}}" wx:key="item.id">
+                    <view class="nav_section_items" >
+                        <!--image-->
+                        <view class="section_image" bindtap="navigateDetail" data-aid="{{item.id}}">
+                        <block wx:if="{{item.coverpath}}">
+                            <image src="{{item.coverpath}}" mode="aspectFill"></image>
+                        </block>
+                        <block wx:else>
+                            <image src="../../images/default_pic.png" mode="aspectFill"></image>
+                        </block>
+                        </view>
+                        <!--content-->
+                        <view class="section_cont" bindtap="navigateDetail" data-aid="{{item.id}}">
+                            <view class="section_cont_sub">
+                                <text>{{item.subject}}</text>
+                            </view>
+                            <view class="section_cont_price">价格：{{item.price}}</view>
+                            <view>{{item.message}}</view>
+                        </view>
+                        <!--book-->
+                        <view class="section_book" bindtap="bookTap" data-aid="{{item.id}}">
+                                <text>预约</text>
+                        </view>
+                    </view>
+                </block>
+            </view>
+            <view wx:else>暂无数据</view>
+        </view>
+         <wux-wing-blank size="default">
+            <wux-card title="育娃资讯" extra="更多资讯">
+                <view slot="body">
+                  <block wx:for="{{zixunList}}" wx:key="item.id">
+                    <wux-media thumb="{{item.pic}}" title="{{item.title}}" label="{{item.message}}"></wux-media>
+              </block> 
+                </view>
+            </wux-card>
+        </wux-wing-blank>
 
-</view>
-
-</scroll-view>
+        <view class="weui-panel weui-panel_access">
+            <view class="weui-panel__hd">
+                育娃资讯
+            </view>
+            <view class="weui-panel__bd">
+                <block wx:for="{{zixunList}}" wx:key="item.id">
+                    <a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg">
+                        <div class="weui-media-box__hd">
+                            <image class="weui-media-box__thumb" src="../../images/recommend_img_06.png" alt="{{item.title}}" mode="aspectFill"></image>
+                        </div>
+                        <div class="weui-media-box__bd">
+                            <h4 class="weui-media-box__title">{{item.title}}</h4>
+                            <p class="weui-media-box__desc">{{item.message}}</p>
+                        </div>
+                    </a>
+                </block>
+            </view>
+        </view>
+    </scroll-view>
 </view>

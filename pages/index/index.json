@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "wux-media": "../../wux-weapp/media/index",
+        "wux-card": "../../wux-weapp/card/index",
+        "wux-wing-blank": "../../wux-weapp/wing-blank/index"
+    }
+}

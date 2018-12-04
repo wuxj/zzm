@@ -1,4 +1,8 @@
 /**app.wxss**/
+
+@import "wux-cusui/common.wxss";
+@import 'wux-weapp/styles/index.wxss';
+
 page{
   display:flex;
   flex-direction:column;
