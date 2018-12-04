@@ -1,5 +1,23 @@
 <!--technician.wxml-->
-
-<view class="container">
-        <image src="../../images/jglb.png" width="100%" height="auto"></image> 
+<view class="page">
+        <wux-tabs default-current="tab1" theme="positive">
+            <wux-tab key="tab1" title="好评优先"></wux-tab>
+            <wux-tab key="tab2" title="距离优先"></wux-tab>
+            <wux-tab key="tab3" title="人气优先"></wux-tab>
+        </wux-tabs>
+        <view class="com-bgFFF com-bt1" wx:for="{{jgList}}" wx:key="item.id">
+          <wux-media-cus thumb="{{item.pic}}" thumb-style="border-radius:5px; width:220rpx;height:160rpx;">
+          <view slot="body">
+            <view class="com-fs14 com-fw7">{{item.title}}</view>
+            <view>
+                    <wux-rater disabled value="{{ value }}" fontSize="16" max="{{item.rate}}" default-value="{{item.rate}}" active-color="#F60" />
+                </view>
+            <view class="com-fs14 com-bgF90 com-inline com-cFFF pl10 pr10">{{item.message}}</view>
+            <view class="com-fs12 mt5">
+              <label class="com-b1-F60 com-cF60 pl10 pr10">{{item.marks[0]}}</label>
+              <label class="com-b1-F60 com-cF60 pl10 pr10 ml5">{{item.marks[1]}}</label>
+            </view>
+          </view>
+          </wux-media-cus>
+        </view>
 </view>

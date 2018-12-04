@@ -1,21 +1,23 @@
-//index.js
+/*technician.js*/
+
 //获取应用实例
 var app = getApp()
-var myData = require('../../utils/data')
-var util = require('../../utils/util')
+var mockData = require('../../mock/data-zx.js')
 
 Page({
   // 页面初始数据
   data: {
-    userData:myData.userData(),
-    addrDate:util.replacePhone(myData.userData().addrs,true)
+    userinfo:{
+      avatar:'../../images/recommend_img_04.png',
+      name:'我是择木同学',
+      id:'2781336'
+    },
+    jgList: mockData.getJgListData()
   },
-  // 地址编辑
-  editAddr : function(e){
-    console.log(e)
-    wx.navigateTo({
-      url:'../edit_addr/edit_addr?addrid='+e.currentTarget.dataset.addrid
-    })
+
+  onLoad: function () {
+    var that = this
   }
+
 
 })

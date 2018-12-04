@@ -1,3 +1,11 @@
 {
-    "navigationBarTitleText":"机构列表"
+    "navigationBarTitleText":"机构列表",
+    "usingComponents": {
+      "wux-tabs": "../../wux-weapp/tabs/index",
+      "wux-tab": "../../wux-weapp/tab/index",
+      "wux-badge": "../../wux-weapp/badge/index",
+      "wux-media-cus": "../../wux-weapp/media-cus/index",
+      "wux-rater": "../../wux-weapp/rater/index",
+      "wux-divider": "../../wux-weapp/divider/index"
+    }
 }

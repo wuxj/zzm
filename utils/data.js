@@ -2,7 +2,7 @@
  * banner数据
  */ 
 function getBannerData(){
-    var arr = ['../../images/banner_01.png', '../../images/banner_02.png', '../../images/banner_03.png', '../../images/banner_04.png']
+  var arr = ['../../images/banner/banner_01.png', '../../images/banner/banner_02.png', '../../images/banner/banner_03.png', '../../images/banner/banner_04.png']
     return arr
 }
 /*
@@ -34,7 +34,12 @@ function getIndexNavData(){
                 id:5,
                 icon:"../../images/nav_icon_05.png",
                 title:"体能训练"
-            }
+            },
+      {
+        id: 6,
+        icon: "../../images/nav_icon_05.png",
+        title: "其它"
+      }
         ]
     return arr
 }

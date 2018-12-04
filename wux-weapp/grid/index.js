@@ -20,7 +20,7 @@ Component({
     },
     data: {
         width: '100%',
-        bordered: true,
+        bordered: false,
         square: true,
         index: 0,
     },

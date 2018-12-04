@@ -3,9 +3,6 @@
         <image class="wux-media__thumb" src="{{ thumb }}" mode="aspectFit" style="{{ thumbStyle }}" wx:if="{{ thumb }}" />
     </view>
     <view class="wux-media__bd">
-        <view class="wux-media__title" wx:if="{{ title }}">{{ title }}</view>
-        <view class="wux-media__desc" wx:if="{{ label }}">{{ label }}</view>
-        <view class="wux-media__extra" wx:if="{{ extra }}">{{ extra }}</view>
-        <slot></slot>
+        <slot name="body"></slot>
     </view>
 </view>

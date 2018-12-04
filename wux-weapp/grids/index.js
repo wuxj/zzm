@@ -22,12 +22,12 @@ Component({
         },
         bordered: {
             type: Boolean,
-            value: true,
+          value: false,
             observer: 'changeCurrent',
         },
         square: {
             type: Boolean,
-            value: false,
+          value: true,
             observer: 'changeCurrent',
         },
     },

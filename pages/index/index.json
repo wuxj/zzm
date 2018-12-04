@@ -2,6 +2,14 @@
     "usingComponents": {
         "wux-media": "../../wux-weapp/media/index",
         "wux-card": "../../wux-weapp/card/index",
-        "wux-wing-blank": "../../wux-weapp/wing-blank/index"
+        "wux-wing-blank": "../../wux-weapp/wing-blank/index",
+        "wux-cell-group": "../../wux-weapp/cell-group/index",
+        "wux-cell": "../../wux-weapp/cell/index",
+        "wux-white-space": "../../wux-weapp/white-space/index",
+        "wux-grids": "../../wux-weapp/grids/index",
+        "wux-grid": "../../wux-weapp/grid/index",
+        "wux-image": "../../wux-weapp/image/index",
+        "wux-row": "../../wux-weapp/row/index",
+        "wux-col": "../../wux-weapp/col/index"
     }
 }

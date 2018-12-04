@@ -1,5 +1,8 @@
 Component({
     externalClasses: ['wux-class'],
+    options: {
+      multipleSlots: true,
+    },
     properties: {
         thumb: {
             type: String,
@@ -8,18 +11,6 @@ Component({
         thumbStyle: {
             type: String,
             value: '',
-        },
-        title: {
-            type: String,
-            value: '',
-        },
-        label: {
-            type: String,
-            value: '',
-        },
-        extra: {
-          type: String,
-          value: '',
         },
         align: {
             type: String,

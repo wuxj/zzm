@@ -1,3 +1,11 @@
 {
-    "navigationBarTitleText":"择木资讯"
+    "navigationBarTitleText":"择木资讯",
+    "usingComponents": {
+      "wux-tabs": "../../wux-weapp/tabs/index",
+      "wux-tab": "../../wux-weapp/tab/index",
+      "wux-media": "../../wux-weapp/media/index",
+      "wux-cell-group": "../../wux-weapp/cell-group/index",
+      "wux-cell": "../../wux-weapp/cell/index",
+      "wux-divider": "../../wux-weapp/divider/index"
+    }
 }

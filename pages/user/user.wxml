@@ -1,7 +1,24 @@
-<!--user.wxml-->
-
-<view class="container">
-  <view class="user_base_info">
-        <image src="../../images/grzx.png" width="100%" height="auto"></image>
-  </view> 
+<!--technician.wxml-->
+<view class="page">
+        <view class="com-bgFFF p10">
+          <wux-media thumb="{{userinfo.avatar}}" thumb-style="width:150rpx;height:150rpx; border-radius: 50%" title="{{userinfo.name}}" label="ID: {{userinfo.id}}"></wux-media>
+        </view>
+        <view class="com-bgFFF com-bt1" wx:for="{{jgList}}" wx:key="item.id">
+          <wux-media-cus thumb="{{item.pic}}" thumb-style="border-radius:5px; width:220rpx;height:160rpx;">
+          <view slot="body">
+            <view class="wux-clearfix com-fs12">
+              <view class="wux-pull-left com-fs14 com-fw7">{{item.title}}</view>
+              <view class="wux-pull-right com-c999">已预约</view>
+            </view>
+            <view>
+                    <wux-rater disabled value="{{ value }}" fontSize="16" max="{{item.rate}}" default-value="{{item.rate}}" active-color="#F60" />
+                </view>
+            <view class="com-fs12 com-cF60">{{item.dates[0]}} - {{item.dates[1]}}</view>
+            <view class="com-fs12 mt5">
+              <label class="com-b1-F60 com-cF60 pl10 pr10">{{item.marks[0]}}</label>
+              <label class="com-b1-F60 com-cF60 pl10 pr10 ml5">{{item.marks[1]}}</label>
+            </view>
+          </view>
+          </wux-media-cus>
+        </view>
 </view>

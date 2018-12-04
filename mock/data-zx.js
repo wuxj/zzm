@@ -1,3 +1,6 @@
+/*
+ * 首页 资讯 数据
+ */
 let getZxData = function() {
     var arr = [
         {
@@ -28,9 +31,90 @@ let getZxData = function() {
     return arr
 };
 /*
+ * 首页 navnav 数据
+ */
+let getIndexNavData = function() {
+  var arr = [
+    {
+      id: 1,
+      icon: "../../images/nav_icon_01.png",
+      title: "英语"
+    },
+    {
+      id: 2,
+      icon: "../../images/nav_icon_02.png",
+      title: "艺术"
+    },
+    {
+      id: 3,
+      icon: "../../images/nav_icon_03.png",
+      title: "户外拓展"
+    },
+    {
+      id: 4,
+      icon: "../../images/nav_icon_04.png",
+      title: "亲子教育"
+    },
+    {
+      id: 5,
+      icon: "../../images/nav_icon_05.png",
+      title: "体能训练"
+    }
+  ]
+  return arr
+};
+
+/**
+ * banner数据
+ */
+let getBannerData = function () {
+  var arr = ['../../images/banner/banner_01.png', '../../images/banner/banner_02.png', '../../images/banner/banner_03.png', '../../images/banner/banner_04.png']
+  return arr
+};
+
+let getJgListData = function () {
+  var arr = [
+    {
+      title: "少儿英语1",
+      rate:1,
+      pic: "../../images/skilledt_img_01.png",
+      message: '免费送你价值399课程',
+      marks:["国内领先","10年行内经验"],
+      dates:["2018-5-19", "2019-5-6"]
+    },
+    {
+      title: "少儿英语2",
+      rate:2,
+      pic: "../../images/skilledt_img_01.png",
+      message: '免费送你价值399课程',
+      marks:["国内领先","10年行内经验"],
+      dates:["2018-5-19", "2019-5-6"]
+    },
+    {
+      title: "少儿英语3",
+      rate: 3,
+      pic: "../../images/skilledt_img_01.png",
+      message: '免费送你价值399课程',
+      marks:["国内领先","10年行内经验"],
+      dates:["2018-5-19", "2019-5-6"]
+    },
+    {
+      title: "少儿英语4",
+      rate: 4,
+      pic: "../../images/skilledt_img_01.png",
+      message: '免费送你价值399课程',
+      marks:["国内领先","10年行内经验"],
+      dates:["2018-5-19", "2019-5-6"]
+    }
+  ]
+  return arr
+};
+/*
  * 对外暴露接口
  */
 module.exports = {
-    getZxData: getZxData
-
+    getZxData: getZxData,
+    getIndexNavData: getIndexNavData,
+  getBannerData: getBannerData,
+  getJgListData: getJgListData
 }

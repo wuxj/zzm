@@ -1,14 +1,19 @@
-<!--technician.wxml-->
-
+<!--index.wxml-->
+<!--<loading hidden="{{!loading}}">
+	{{title}}
+</loading>-->
 <view class="container">
-<scroll-view  scroll-y="true"  class="page-body" bindscrolltolower="loadMore">
- 
-
-  <!--list-->
-  <view class="nav_section">
-        <image src="../../images/zmzx.png" width="100%" height="auto"></image> 
-          
-</view>
-
-</scroll-view>
+    <scroll-view  scroll-y="true"  class="page-body" bindscrolltolower="loadMore">
+         <wux-tabs default-current="tab1" theme="positive">
+            <wux-tab key="tab1" title="择木动态"></wux-tab>
+            <wux-tab key="tab2" title="教育资讯"></wux-tab>
+            <wux-tab key="tab3" title="大V分享"></wux-tab>
+        </wux-tabs>
+        <!-- 资讯 -->
+        <block class="com-bgFFF">
+          <view class="com-bgFFF  com-bt1" wx:for="{{zixunList}}" wx:key="item.id">
+                    <wux-media thumb="{{item.pic}}" title="{{item.title}}" label="{{item.message}} " extra="{{item.date}}"></wux-media>
+              </view> 
+        </block>
+    </scroll-view>
 </view>
