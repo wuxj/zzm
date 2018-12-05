@@ -23,7 +23,7 @@
 
         <!-- nav -->
         <block class="com-bgFFF">
-        <wux-grids col="5">
+        <wux-grids col="4">
             <block wx:for="{{navList}}" wx:key="item.id">
               <wux-grid thumb="{{item.icon}}" label="{{item.title}}" bind:click="navItemClick" />                    </block>
         </wux-grids>

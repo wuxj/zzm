@@ -12,7 +12,7 @@ Page({
       name:'我是择木同学',
       id:'2781336'
     },
-    navList: mockData.getIndexNavData()
+    jgList: mockData.getJgListData()
   },
 
   onLoad: function () {

@@ -1,8 +1,8 @@
 {
     "navigationBarTitleText":"我的预约",
     "usingComponents": {
-      "wux-grids": "../../wux-weapp/grids/index",
-      "wux-grid": "../../wux-weapp/grid/index",
+      "wux-badge": "../../wux-weapp/badge/index",
+      "wux-rater": "../../wux-weapp/rater/index",
       "wux-media": "../../wux-weapp/media/index",
       "wux-media-cus": "../../wux-weapp/media-cus/index"
     }
